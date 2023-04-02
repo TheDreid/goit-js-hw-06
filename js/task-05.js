@@ -1,9 +1,6 @@
-const newInpuRef = document.querySelector("input#name-input");
-const newOutRef = document.querySelector("span#name-output");
+const nameInput = document.getElementById("name-input");
+const nameOutput = document.getElementById("name-output");
 
-newInpuRef.addEventListener("input", (e) => {
-  if (e.value === " ") {
-    newOutRef.textContent = Anonymous;
-  }
-  newOutRef.textContent = e.currentTarget.value;
+nameInput.addEventListener("input", () => {
+  nameOutput.textContent = nameInput.value || "Anonymous";
 });
